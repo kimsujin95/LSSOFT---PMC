@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.mapper.JoinMapper">
+
+	<select id="getReservationList" resultType="org.zerock.domain.joinMemberVO" >
+		<![CDATA[SELECT * FROM RESERVATIONLIST]]>
+	</select>
+	
+
+	<insert id="insert">
+		/** #######회원가입 -JoinMapper.xml*/
+		insert into PICKME_MEMBER values 
+			(
+				#{userid, jdbcType=VARCHAR},
+				#{userpw, jdbcType=VARCHAR},
+				#{username, jdbcType=VARCHAR},
+				#{phoneno, jdbcType=VARCHAR},
+				#{gender, jdbcType=VARCHAR},
+				#{email, jdbcType=VARCHAR},
+				#{birthday, jdbcType=VARCHAR}, 
+				#{auth, jdbcType=VARCHAR}, 
+				#{enabled, jdbcType=VARCHAR}
+				)
+
+	</insert>
+<!-- 	<insert id="insert">
+		insert into PICKME_MEMBER_AUTH values (#{userid, jdbcType=VARCHAR}, #{auth, jdbcType=VARCHAR})
+	</insert> -->
+    <resultMap type="org.zerock.domain.joinMemberVO" id="jmemberMap">
+    	<id property="userid" column="userid"/>
+    	<result property="userid" column="userid"/>
+    	<result property="userpw" column="userpw"/>
+    	<result property="username" column="username"/>
+    	<result property="phoneno" column="phoneno"/>
+    	<result property="email" column="email"/>
+    	<result property="gender" column="gender"/>
+    	<result property="birthday" column="birthday"/>
+    	<result property="auth" column="auth"/>
+    	<collection property="authList" resultMap="jmemberMap"></collection>
+    	<!-- <collection property="authList" resultMap="authMap">
+	</collection> -->
+    	
+    	
+    </resultMap>
+    
+    <resultMap type="org.zerock.domain.AuthVO" id="authMap">
+    	<result property="userid" column="userid"/>
+    	<result property="auth" column="auth"/>
+    </resultMap>
+    
+    <select id="read" resultMap="jmemberMap">
+<!--     SELECT
+    	*
+    FROM
+    	pickme_member  -->
+    	SELECT * FROM 
+    		pickme_member
+    </select>
+
+
+</mapper>

@@ -1,0 +1,10 @@
+#tab_ba { border-collapse: separate; border-spacing: 2px; 
+    text-align: center; line-height: 1.5; margin: auto;}
+table th { width: 160px; padding: 10px; font-weight: bold; text-align: center;
+     vertical-align: top; color: #fff; background: #c875ee; margin: auto;}
+table td { width: 160px; padding: 10px; vertical-align: top; text-align: center;
+      border-bottom: 1px solid #ccc; background: #eee; margin: auto;}
+
+#container {width: 1100px; margin:10px auto;}
+.section {width: 1200px; margin:0px auto;}
+

@@ -1,0 +1,29 @@
+#aboutus_main {
+    color: #20303c;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    letter-spacing: .4px;
+    font-family: HelveticaNeueW01-45Ligh,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    align-content: center;
+    text-align: center;
+
+}
+
+h1#content{
+  text-decoration:#cc99ff; 
+  text-align: center;
+}
+h4#aboutus_content{
+    line-height: 0em;
+}
+img#aboutusimg{ 
+    margin: 20px;
+    padding: 20px;
+    vspace: 100px;
+
+}

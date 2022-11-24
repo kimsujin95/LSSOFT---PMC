@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/main/java/org/zerock/controller/LoginController.java=UTF-8
+encoding//src/main/java/org/zerock/controller/pageController.java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/board/list.jsp=UTF-8
+encoding//src/main/webapp/resources/attraction.json=UTF-8
+encoding//src/test/java/org/zerock/service/BoardServiceTests.java=UTF-8

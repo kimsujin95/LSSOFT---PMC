@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.mapper.CarInfoMapper">
+
+<select id="getList" resultType="org.zerock.domain.CarInfoVO" resultMap="CarInfo">
+<![CDATA[
+ /** ####### 차량 정보조회*/
+	SELECT carid,
+		carno,
+		carmodel,
+		carcategory,
+		price,
+		dprice		 
+	FROM carinfo 
+	WHERE nowlocation=
+		#{nowlocation}
+				]]>
+</select>
+
+<select id="read" resultType="org.zerock.domain.CarReservationVO" resultMap="CarInfo">
+		select * 
+		from CARINFO 
+		where carid=
+			#{carid}
+	</select>
+	
+	<resultMap id="CarInfo" type="org.zerock.domain.CarInfoVO" >
+    	<result property="carid" column="carid"/>
+    	<result property="carno" column="carno" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    	<result property="carmodel" column="carmodel" jdbcType="VARCHAR" javaType="java.lang.String" />
+    	<result property="carcategory" column="carcategory" jdbcType="VARCHAR" javaType="java.lang.String" />
+    	<result property="price" column="price" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    	<result property="dprice" column="dprice" jdbcType="VARCHAR" javaType="java.lang.String" />
+    	
+	</resultMap>
+
+
+</mapper>
